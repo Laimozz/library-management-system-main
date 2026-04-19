@@ -1,0 +1,107 @@
+﻿Section,1.1 Cong cu va thu vien,,,,,,,,
+Loai cong cu,Ten,Phien ban,Muc dich su dung trong du an,Ghi chu,,,,,
+Khung kiem thu,Vitest,4.1.4,Chay unit test cho FE va BE,Cau hinh trong vitest.config.ts,,,,,
+Cong cu do do bao phu,@vitest/coverage-v8,4.1.4,Tao bao cao do bao phu ma,Chay bang npm run test:coverage,,,,,
+Khang dinh va gia lap,Vitest expect va vi,4.1.4,Khang dinh ket qua va gia lap phu thuoc,Dung trong tests/unit/api va tests/unit/routes,,,,,
+Moi truong chay,Node.js,24.13.0,Thuc thi Vitest va test TypeScript,Da xac minh tren may local,,,,,
+Trinh quan ly goi,npm,N/A,Cai phu thuoc va chay script,Cac lenh chinh: npm test va npm run test:coverage,,,,,
+Dinh dang bao cao,CSV,N/A,Luu bang chung va theo doi unit test,Mau bao cao mot tep,,,,,
+,,,,,,,,,
+Section,1.2.1 Pham vi kiem thu - DUOC kiem thu,,,,,,,,
+Loai hang muc,Ham/Lop/Tep,Duong dan,Ly do kiem thu hang muc nay?,Muc uu tien,,,,,
+Tep,CRUD adapter API Tac gia,src/api/author.api.ts,Xay dung URL method header payload va xu ly response,Cao,,,,,
+Tep,CRUD adapter API The loai,src/api/category.api.ts,Xay dung URL method header payload va xu ly response,Cao,,,,,
+Tep,CRUD adapter API Sach,src/api/book.api.ts,Xay dung URL method header payload va xu ly response,Cao,,,,,
+Tep,CRUD adapter API Ban sao sach,src/api/book-item.api.ts,Xay dung URL method header payload va xu ly response,Cao,,,,,
+Tep,CRUD adapter API Ebook,src/api/book-edition.api.ts,Xay dung URL method header payload va xu ly response,Cao,,,,,
+Tep,CRUD route handler Tac gia,src/app/api/authors/route.ts; src/app/api/authors/[id]/route.ts,Xac thuc logic CRUD backend voi DB state gia lap,Cao,,,,,
+Tep,CRUD route handler The loai,src/app/api/categories/route.ts; src/app/api/categories/[id]/route.ts,Xac thuc logic CRUD backend voi DB state gia lap,Cao,,,,,
+Tep,CRUD route handler Ban sao sach,src/app/api/book-items/route.ts; src/app/api/book-items/[id]/route.ts,Xac thuc logic CRUD backend voi DB state gia lap,Cao,,,,,
+Tep,CRUD route handler Sach,src/app/api/books/route.ts; src/app/api/books/[id]/route.ts,Xac thuc logic CRUD backend voi DB state gia lap,Cao,,,,,
+Tep,CRUD route handler Ebook,src/app/api/book-editions/route.ts; src/app/api/book-editions/[id]/route.ts; src/app/api/book-editions/bulk-delete/route.ts,Xac thuc logic CRUD backend voi DB state gia lap,Cao,,,,,
+,,,,,,,,,
+Section,1.2.2 Pham vi kiem thu - KHONG can kiem thu,,,,,,,,
+Loai hang muc,Ham/Lop/Tep,Duong dan,Ly do khong kiem thu,,,,,,
+Thu muc,Thanh phan UI trang va style,src/components/**; src/app/**,Giai doan nay tap trung unit test adapter API va backend route,,,,,,
+Thu muc,Phu thuoc ben ngoai,node_modules/**,Ma ben thu ba khong thuoc so huu du an,,,,,,
+Thu muc,San pham Prisma duoc sinh,prisma/generated/**,Ma duoc tao tu dong,,,,,,
+Tep,Ket noi co so du lieu that va migration,src/lib/prisma.ts; prisma/migrations/**,Unit test dang dung state trong bo nho gia lap khong phai integration DB,,,,,,
+Tep,Dich vu goi he thong de xuat ben ngoai,src/services/gorse.service.ts; src/services/qdrant.service.ts,Tac dong ngoai duoc gia lap trong unit test,,,,,,
+Tep,Trien khai upload va xoa tep he thong,src/lib/server-utils.ts,File I/O duoc gia lap de dam bao tinh on dinh,,,,,,
+,,,,,,,,,
+Section,1.3 Bo test case,,,,,,,,,
+STT,Chuc nang,Script test,Function,Testcase ID,Test Objective,Input,Expected Output,Notes,Ket qua,Minh chung
+1,Author,tests/unit/api/author.api.test.ts,getList(),TC_UT_AUTHOR_001,Lay danh sach tac gia voi bo loc truy van,tham so phan trang va tim kiem,Chuoi truy van va lenh fetch dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+2,Author,tests/unit/api/author.api.test.ts,getById(),TC_UT_AUTHOR_002,Lay tac gia theo id,author id,Duong dan endpoint dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+3,Author,tests/unit/api/author.api.test.ts,create(),TC_UT_AUTHOR_003,Tao yeu cau tac gia,author payload,Yeu cau POST voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+4,Author,tests/unit/api/author.api.test.ts,update(),TC_UT_AUTHOR_004,Cap nhat yeu cau tac gia,author id va payload,Yeu cau PUT voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+5,Author,tests/unit/api/author.api.test.ts,delete(),TC_UT_AUTHOR_005,Xoa tac gia duong thanh cong,author id,Yeu cau DELETE resolve thanh cong,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+6,Author,tests/unit/api/author.api.test.ts,delete(),TC_UT_AUTHOR_006,Xoa tac gia duong loi,author id va response loi,Nem ra thong bao loi mong doi,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+7,Category,tests/unit/api/category.api.test.ts,getList(),TC_UT_CATEGORY_001,Lay danh sach the loai voi bo loc truy van,tham so phan trang va tim kiem,Chuoi truy van va lenh fetch dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+8,Category,tests/unit/api/category.api.test.ts,getById(),TC_UT_CATEGORY_002,Lay the loai theo id,category id,Duong dan endpoint dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+9,Category,tests/unit/api/category.api.test.ts,create(),TC_UT_CATEGORY_003,Tao yeu cau the loai,category payload,Yeu cau POST voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+10,Category,tests/unit/api/category.api.test.ts,update(),TC_UT_CATEGORY_004,Cap nhat yeu cau the loai,category id va payload,Yeu cau PUT voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+11,Category,tests/unit/api/category.api.test.ts,delete(),TC_UT_CATEGORY_005,Xoa the loai duong thanh cong,category id,Yeu cau DELETE resolve thanh cong,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+12,Category,tests/unit/api/category.api.test.ts,delete(),TC_UT_CATEGORY_006,Xoa the loai duong loi,category id va response loi,Nem ra thong bao loi mong doi,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+13,Book (FE),tests/unit/api/book.api.test.ts,getList(),TC_UT_BOOK_001,Lay danh sach sach voi bo loc,tham so phan trang va bo loc,Chuoi truy van va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+14,Book (FE),tests/unit/api/book.api.test.ts,getById(),TC_UT_BOOK_002,Lay chi tiet sach theo id,book id,Duong dan endpoint va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+15,Book (FE),tests/unit/api/book.api.test.ts,create(),TC_UT_BOOK_003,Tao yeu cau sach,book payload,Yeu cau POST voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+16,Book (FE),tests/unit/api/book.api.test.ts,update(),TC_UT_BOOK_004,Cap nhat yeu cau sach,book id va payload,Yeu cau PUT voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+17,Book (FE),tests/unit/api/book.api.test.ts,delete(),TC_UT_BOOK_005,Xoa yeu cau sach,book id,Yeu cau DELETE va goi ham xu ly response,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+18,Book Copy,tests/unit/api/book-item.api.test.ts,getList(),TC_UT_BOOKCOPY_001,Lay danh sach ban sao sach voi bo loc,tham so phan trang va bo loc,Chuoi truy van va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+19,Book Copy,tests/unit/api/book-item.api.test.ts,getById(),TC_UT_BOOKCOPY_002,Lay ban sao sach theo id,copy id,Duong dan endpoint va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+20,Book Copy,tests/unit/api/book-item.api.test.ts,create(),TC_UT_BOOKCOPY_003,Tao yeu cau ban sao sach,copy payload,Yeu cau POST voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+21,Book Copy,tests/unit/api/book-item.api.test.ts,update(),TC_UT_BOOKCOPY_004,Cap nhat yeu cau ban sao sach,copy id va payload,Yeu cau PUT voi JSON body,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+22,Book Copy,tests/unit/api/book-item.api.test.ts,delete(),TC_UT_BOOKCOPY_005,Xoa yeu cau ban sao sach,copy id,Yeu cau DELETE va goi ham xu ly response,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+23,Ebook,tests/unit/api/book-edition.api.test.ts,getList(),TC_UT_EBOOK_001,Lay danh sach ebook voi bo loc,tham so bo loc va token,Chuoi truy van va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+24,Ebook,tests/unit/api/book-edition.api.test.ts,getById(),TC_UT_EBOOK_002,Lay ebook theo id,edition id,Duong dan endpoint va auth header dung,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+25,Ebook,tests/unit/api/book-edition.api.test.ts,create(),TC_UT_EBOOK_003,Tao yeu cau ebook,book id va form data,Yeu cau POST va tu dong them bookId,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+26,Ebook,tests/unit/api/book-edition.api.test.ts,update(),TC_UT_EBOOK_004,Cap nhat yeu cau ebook,edition id va form data,Yeu cau PATCH voi auth header,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+27,Ebook,tests/unit/api/book-edition.api.test.ts,delete(),TC_UT_EBOOK_005,Xoa nhieu ebook,ids array,Yeu cau DELETE voi JSON ids payload,Unit FE adapter API; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+28,Author,tests/unit/routes/authors.route.test.ts,getList(),TC_UT_BE_AUTHOR_001,Doc danh sach tac gia,chuoi truy van page va search,Tra ve danh sach co phan trang,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+29,Author,tests/unit/routes/authors.route.test.ts,create(),TC_UT_BE_AUTHOR_002,Tao tac gia co rollback,JSON body hop le,DB state co tac gia moi roi khoi phuc snapshot,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+30,Author,tests/unit/routes/authors.route.test.ts,getById(),TC_UT_BE_AUTHOR_003,Doc tac gia theo id,author id param,Tra ve chi tiet tac gia,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+31,Author,tests/unit/routes/authors.route.test.ts,update(),TC_UT_BE_AUTHOR_004,Cap nhat tac gia co rollback,author id va JSON body,DB state duoc cap nhat roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+32,Author,tests/unit/routes/authors.route.test.ts,delete(),TC_UT_BE_AUTHOR_005,Soft delete tac gia co rollback,author id param,DB state isDeleted true roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+33,Category,tests/unit/routes/categories.route.test.ts,getList(),TC_UT_BE_CATEGORY_001,Doc danh sach the loai,chuoi truy van page va search,Tra ve danh sach co phan trang,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+34,Category,tests/unit/routes/categories.route.test.ts,create(),TC_UT_BE_CATEGORY_002,Tao the loai co rollback,JSON body hop le,DB state co the loai moi roi khoi phuc snapshot,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+35,Category,tests/unit/routes/categories.route.test.ts,getById(),TC_UT_BE_CATEGORY_003,Doc the loai theo id,category id param,Tra ve chi tiet the loai,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+36,Category,tests/unit/routes/categories.route.test.ts,update(),TC_UT_BE_CATEGORY_004,Cap nhat the loai co rollback,category id va JSON body,DB state duoc cap nhat roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+37,Category,tests/unit/routes/categories.route.test.ts,delete(),TC_UT_BE_CATEGORY_005,Soft delete the loai co rollback,category id param,DB state isDeleted true roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+38,Book Copy,tests/unit/routes/book-items.route.test.ts,getList(),TC_UT_BE_BOOKCOPY_001,Doc danh sach ban sao sach,chuoi truy van bo loc,Tra ve danh sach co phan trang,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+39,Book Copy,tests/unit/routes/book-items.route.test.ts,create(),TC_UT_BE_BOOKCOPY_002,Tao ban sao sach co rollback,JSON body hop le,DB state co ban sao moi roi khoi phuc snapshot,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+40,Book Copy,tests/unit/routes/book-items.route.test.ts,getById(),TC_UT_BE_BOOKCOPY_003,Doc ban sao sach theo id,copy id param,Tra ve chi tiet ban sao sach,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+41,Book Copy,tests/unit/routes/book-items.route.test.ts,update(),TC_UT_BE_BOOKCOPY_004,Cap nhat ban sao sach co rollback,copy id va JSON body,DB state duoc cap nhat roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+42,Book Copy,tests/unit/routes/book-items.route.test.ts,delete(),TC_UT_BE_BOOKCOPY_005,Soft delete ban sao sach co rollback,copy id param,DB state isDeleted true roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+43,Book (BE),tests/unit/routes/books.route.test.ts,create(),TC_UT_BE_BOOK_001,Tao sach co rollback,JSON body hop le,DB state co sach moi roi khoi phuc snapshot,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+44,Book (BE),tests/unit/routes/books.route.test.ts,getById(),TC_UT_BE_BOOK_002,Doc sach theo id,book id param,Tra ve chi tiet sach,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+45,Book (BE),tests/unit/routes/books.route.test.ts,update(),TC_UT_BE_BOOK_003,Cap nhat sach co rollback,book id va JSON body,DB state duoc cap nhat roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+46,Book (BE),tests/unit/routes/books.route.test.ts,delete(),TC_UT_BE_BOOK_004,Soft delete sach co rollback,book id param,DB state isDeleted true roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+47,Ebook,tests/unit/routes/book-editions.route.test.ts,create(),TC_UT_BE_EBOOK_001,Tao ebook co rollback,form data va file stub,DB state co edition moi roi khoi phuc snapshot,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+48,Ebook,tests/unit/routes/book-editions.route.test.ts,getById(),TC_UT_BE_EBOOK_002,Doc ebook theo id,edition id param,Tra ve chi tiet edition,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+49,Ebook,tests/unit/routes/book-editions.route.test.ts,update(),TC_UT_BE_EBOOK_003,Cap nhat ebook co rollback,edition id va form data,DB state duoc cap nhat roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+50,Ebook,tests/unit/routes/book-editions.route.test.ts,delete(),TC_UT_BE_EBOOK_004,Soft delete nhieu ebook co rollback,ids array trong body,DB state isDeleted true roi khoi phuc,Unit BE route; CheckDB=Y; Rollback=Y,PASS,Chua cap nhat
+51,Ebook,tests/unit/routes/book-editions.route.test.ts,getList(),TC_UT_BE_EBOOK_005,Doc danh sach ebook,chuoi truy van bo loc,Tra ve danh sach co phan trang,Unit BE route; CheckDB=N; Rollback=N,PASS,Chua cap nhat
+,,,,,,,,,,
+Section,1.4 Lien ket du an,,,,,,,,
+Hang muc,Gia tri,Ghi chu,,,,,,,
+URL kho ma GitHub,<dan_repo_url_vao_day>,Kho ma chinh,,,,,,,
+Nhanh cho Unit Test,<dan_ten_nhanh_vao_day>,Vi du: feature/unit-tests-auth,,,,,,,
+URL Pull Request,<dan_pr_url_vao_day>,Tuy chon nhung khuyen nghi,,,,,,,
+Thu muc script test,tests/unit,Dieu chinh neu co thay doi,,,,,,,
+,,,,,,,,,
+Section,1.5 Bao cao thuc thi,,,,,,,,
+Ngay thuc thi,Lenh,Tong so test,Dat,Loi,Bo qua,Tom tat ket qua,Duong dan anh chup,Ghi chu,
+YYYY-MM-DD,npm test,0,0,0,0,<tom_tat>,<duong_dan_anh_chup_ket_qua_test>,,
+YYYY-MM-DD,npm test -- <tep_test_muc_tieu>,0,0,0,0,<tom_tat>,<duong_dan_anh_chup_test_muc_tieu>,,
+,,,,,,,,,
+Section,1.6 Bao cao do bao phu ma,,,,,,,,
+Ngay thuc thi,Lenh,Statements %,Branches %,Functions %,Lines %,Duong dan dau ra coverage,Duong dan anh chup,Ghi chu,
+YYYY-MM-DD,npm run test:coverage,0,0,0,0,coverage/index.html,<duong_dan_anh_chup_coverage>,,
+,,,,,,,,,
+Section,1.7 Tai lieu tham khao va danh sach prompt da dung,,,,,,,,
+Loai,Nguon/Prompt,Muc dich,Dung trong,Ghi chu,,,,,
+Tham khao,Tai lieu mon hoc muc 5.3,Dinh nghia test case va dinh dang script,Muc 1.3,Cap nhat theo bieu mau nam hien tai,,,,,
+Tham khao,Tai lieu Vitest,Thiet lap framework va API,Script kiem thu,,,,,
+Prompt,<dan_prompt_1_vao_day>,Sinh y tuong test case,<ten_tinh_nang>,,,,,
+Prompt,<dan_prompt_2_vao_day>,Sinh test case bien va am,<ten_tinh_nang>,,,,,

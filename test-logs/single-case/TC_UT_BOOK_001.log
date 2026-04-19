@@ -1,0 +1,28 @@
+﻿
+> library-management-system@0.1.0 test
+> vitest run .\tests\unit\api\book.api.test.ts -t gets books and builds query string with filters --reporter=verbose
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.4 [39m[90mD:/PTIT/SQA/library-management-system-main[39m
+
+node.exe : [baseline-browser-mapping] The data in this module is over two 
+months old.  To ensure accurate Baseline data, please update: `npm i 
+baseline-browser-mapping@latest -D`
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([baseline-brows...ping@latest -D` 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ [32mÔ£ô[39m tests/unit/api/book.api.test.ts[2m > [22mBookApi CRUD[2m > [22mgets books and builds query string with filters[32m 2[2mms[22m[39m
+ [2m[90mÔåô[39m[22m tests/unit/api/book.api.test.ts[2m > [22mBookApi CRUD[2m > [22mgets book detail by id with bearer token
+ [2m[90mÔåô[39m[22m tests/unit/api/book.api.test.ts[2m > [22mBookApi CRUD[2m > [22mcreates a book with JSON payload and auth header
+ [2m[90mÔåô[39m[22m tests/unit/api/book.api.test.ts[2m > [22mBookApi CRUD[2m > [22mupdates a book with JSON payload and auth header
+ [2m[90mÔåô[39m[22m tests/unit/api/book.api.test.ts[2m > [22mBookApi CRUD[2m > [22mdeletes a book and delegates response parsing to handleJson
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m1 passed[39m[22m[2m | [22m[33m4 skipped[39m[90m (5)[39m
+[2m   Start at [22m 15:57:32
+[2m   Duration [22m 303ms[2m (transform 32ms, setup 0ms, import 45ms, tests 3ms, environment 0ms)[22m
+

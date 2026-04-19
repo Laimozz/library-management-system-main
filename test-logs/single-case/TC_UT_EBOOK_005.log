@@ -1,0 +1,28 @@
+﻿
+> library-management-system@0.1.0 test
+> vitest run .\tests\unit\api\book-edition.api.test.ts -t bulk deletes ebook editions with JSON ids payload --reporter=verbose
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.4 [39m[90mD:/PTIT/SQA/library-management-system-main[39m
+
+node.exe : [baseline-browser-mapping] The data in this module is over two 
+months old.  To ensure accurate Baseline data, please update: `npm i 
+baseline-browser-mapping@latest -D`
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([baseline-brows...ping@latest -D` 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ [2m[90mÔåô[39m[22m tests/unit/api/book-edition.api.test.ts[2m > [22mBookEditionApi CRUD (Ebook)[2m > [22mgets ebook editions with filter query
+ [2m[90mÔåô[39m[22m tests/unit/api/book-edition.api.test.ts[2m > [22mBookEditionApi CRUD (Ebook)[2m > [22mgets ebook edition by id
+ [2m[90mÔåô[39m[22m tests/unit/api/book-edition.api.test.ts[2m > [22mBookEditionApi CRUD (Ebook)[2m > [22mcreates ebook edition and appends bookId into formData
+ [2m[90mÔåô[39m[22m tests/unit/api/book-edition.api.test.ts[2m > [22mBookEditionApi CRUD (Ebook)[2m > [22mupdates ebook edition with PATCH formData request
+ [32mÔ£ô[39m tests/unit/api/book-edition.api.test.ts[2m > [22mBookEditionApi CRUD (Ebook)[2m > [22mbulk deletes ebook editions with JSON ids payload[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m1 passed[39m[22m[2m | [22m[33m4 skipped[39m[90m (5)[39m
+[2m   Start at [22m 15:57:26
+[2m   Duration [22m 297ms[2m (transform 32ms, setup 0ms, import 46ms, tests 3ms, environment 0ms)[22m
+
