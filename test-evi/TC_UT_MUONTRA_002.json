@@ -1,0 +1,755 @@
+{
+  "testCaseId": "TC_UT_MUONTRA_002",
+  "generatedAt": "2026-05-10T15:04:56.671Z",
+  "snapshots": {
+    "dbTruocKhiChay": {
+      "users": [
+        {
+          "id": 101,
+          "fullName": "Reader One",
+          "email": "reader@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 102,
+          "fullName": "Other Reader",
+          "email": "other@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 201,
+          "fullName": "Librarian",
+          "email": "lib@example.com",
+          "role": "LIBRARIAN",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "coverImageUrl": null,
+          "publishYear": 2008,
+          "price": 25,
+          "author": {
+            "id": 1,
+            "fullName": "Robert C. Martin"
+          }
+        },
+        {
+          "id": 11,
+          "title": "No PDF Book",
+          "isbn": null,
+          "coverImageUrl": null,
+          "publishYear": 2020,
+          "price": 10,
+          "author": {
+            "id": 1,
+            "fullName": "Author One"
+          }
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        },
+        {
+          "id": 4,
+          "bookId": 10,
+          "code": "CP-004",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "fileFormat": "PDF",
+          "storageUrl": "/api/files/uploads/ebooks/clean-code.pdf",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequests": [
+        {
+          "id": 5,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "APPROVED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 6,
+          "userId": 102,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "PENDING",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 7,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "FULFILLED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "borrowRequestId": 5,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 6,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 7,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRecords": [
+        {
+          "id": 7,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 8,
+          "userId": 101,
+          "borrowDate": "2026-04-01T00:00:00.000Z",
+          "returnDate": "2026-04-20T00:00:00.000Z",
+          "actualReturnDate": "2026-04-10T00:00:00.000Z",
+          "renewalCount": 0,
+          "status": "RETURNED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 9,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowBooks": [
+        {
+          "borrowId": 7,
+          "bookItemId": 3,
+          "isDeleted": false
+        }
+      ],
+      "borrowEbooks": [
+        {
+          "borrowId": 9,
+          "bookId": 10,
+          "isDeleted": false
+        }
+      ],
+      "payments": [],
+      "policies": [
+        {
+          "id": "LOST_BOOK",
+          "name": "Lost book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "DAMAGED_BOOK",
+          "name": "Damaged book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "WORN_BOOK",
+          "name": "Worn book",
+          "amount": 50,
+          "unit": "FIXED",
+          "isDeleted": false
+        }
+      ],
+      "nextBorrowRequestId": 20,
+      "nextBorrowRecordId": 30,
+      "nextPaymentId": 40
+    },
+    "dbSauKhiChay": {
+      "users": [
+        {
+          "id": 101,
+          "fullName": "Reader One",
+          "email": "reader@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 102,
+          "fullName": "Other Reader",
+          "email": "other@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 201,
+          "fullName": "Librarian",
+          "email": "lib@example.com",
+          "role": "LIBRARIAN",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "coverImageUrl": null,
+          "publishYear": 2008,
+          "price": 25,
+          "author": {
+            "id": 1,
+            "fullName": "Robert C. Martin"
+          }
+        },
+        {
+          "id": 11,
+          "title": "No PDF Book",
+          "isbn": null,
+          "coverImageUrl": null,
+          "publishYear": 2020,
+          "price": 10,
+          "author": {
+            "id": 1,
+            "fullName": "Author One"
+          }
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        },
+        {
+          "id": 4,
+          "bookId": 10,
+          "code": "CP-004",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "fileFormat": "PDF",
+          "storageUrl": "/api/files/uploads/ebooks/clean-code.pdf",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequests": [
+        {
+          "id": 5,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "APPROVED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 6,
+          "userId": 102,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "PENDING",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 7,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "FULFILLED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 20,
+          "userId": 101,
+          "startDate": "2026-05-10T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "APPROVED",
+          "createdAt": "2026-05-10T15:04:56.669Z",
+          "updatedAt": "2026-05-10T15:04:56.669Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "borrowRequestId": 5,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 6,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 7,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 20,
+          "bookId": 11,
+          "quantity": 1,
+          "startDate": "2026-05-10T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-10T15:04:56.669Z",
+          "updatedAt": "2026-05-10T15:04:56.669Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRecords": [
+        {
+          "id": 7,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 8,
+          "userId": 101,
+          "borrowDate": "2026-04-01T00:00:00.000Z",
+          "returnDate": "2026-04-20T00:00:00.000Z",
+          "actualReturnDate": "2026-04-10T00:00:00.000Z",
+          "renewalCount": 0,
+          "status": "RETURNED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 9,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowBooks": [
+        {
+          "borrowId": 7,
+          "bookItemId": 3,
+          "isDeleted": false
+        }
+      ],
+      "borrowEbooks": [
+        {
+          "borrowId": 9,
+          "bookId": 10,
+          "isDeleted": false
+        }
+      ],
+      "payments": [],
+      "policies": [
+        {
+          "id": "LOST_BOOK",
+          "name": "Lost book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "DAMAGED_BOOK",
+          "name": "Damaged book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "WORN_BOOK",
+          "name": "Worn book",
+          "amount": 50,
+          "unit": "FIXED",
+          "isDeleted": false
+        }
+      ],
+      "nextBorrowRequestId": 21,
+      "nextBorrowRecordId": 30,
+      "nextPaymentId": 40
+    },
+    "dbSauKhiRollback": {
+      "users": [
+        {
+          "id": 101,
+          "fullName": "Reader One",
+          "email": "reader@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 102,
+          "fullName": "Other Reader",
+          "email": "other@example.com",
+          "role": "READER",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        },
+        {
+          "id": 201,
+          "fullName": "Librarian",
+          "email": "lib@example.com",
+          "role": "LIBRARIAN",
+          "avatarUrl": null,
+          "violationPoints": 0,
+          "isDeleted": false
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "coverImageUrl": null,
+          "publishYear": 2008,
+          "price": 25,
+          "author": {
+            "id": 1,
+            "fullName": "Robert C. Martin"
+          }
+        },
+        {
+          "id": 11,
+          "title": "No PDF Book",
+          "isbn": null,
+          "coverImageUrl": null,
+          "publishYear": 2020,
+          "price": 10,
+          "author": {
+            "id": 1,
+            "fullName": "Author One"
+          }
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        },
+        {
+          "id": 4,
+          "bookId": 10,
+          "code": "CP-004",
+          "condition": "GOOD",
+          "status": "ON_BORROW",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "fileFormat": "PDF",
+          "storageUrl": "/api/files/uploads/ebooks/clean-code.pdf",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequests": [
+        {
+          "id": 5,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "APPROVED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 6,
+          "userId": 102,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "PENDING",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 7,
+          "userId": 101,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "status": "FULFILLED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "borrowRequestId": 5,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 6,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-08T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "borrowRequestId": 7,
+          "bookId": 10,
+          "quantity": 1,
+          "startDate": "2026-05-09T00:00:00.000Z",
+          "endDate": "2026-05-20T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRecords": [
+        {
+          "id": 7,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 8,
+          "userId": 101,
+          "borrowDate": "2026-04-01T00:00:00.000Z",
+          "returnDate": "2026-04-20T00:00:00.000Z",
+          "actualReturnDate": "2026-04-10T00:00:00.000Z",
+          "renewalCount": 0,
+          "status": "RETURNED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 9,
+          "userId": 101,
+          "borrowDate": "2026-05-01T00:00:00.000Z",
+          "returnDate": "2026-05-20T00:00:00.000Z",
+          "actualReturnDate": null,
+          "renewalCount": 0,
+          "status": "BORROWED",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowBooks": [
+        {
+          "borrowId": 7,
+          "bookItemId": 3,
+          "isDeleted": false
+        }
+      ],
+      "borrowEbooks": [
+        {
+          "borrowId": 9,
+          "bookId": 10,
+          "isDeleted": false
+        }
+      ],
+      "payments": [],
+      "policies": [
+        {
+          "id": "LOST_BOOK",
+          "name": "Lost book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "DAMAGED_BOOK",
+          "name": "Damaged book",
+          "amount": 100,
+          "unit": "FIXED",
+          "isDeleted": false
+        },
+        {
+          "id": "WORN_BOOK",
+          "name": "Worn book",
+          "amount": 50,
+          "unit": "FIXED",
+          "isDeleted": false
+        }
+      ],
+      "nextBorrowRequestId": 20,
+      "nextBorrowRecordId": 30,
+      "nextPaymentId": 40
+    }
+  }
+}

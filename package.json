@@ -38,6 +38,7 @@
     "bcryptjs": "^3.0.2",
     "bullmq": "^5.62.0",
     "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
     "framer-motion": "^12.23.24",
     "jose": "^6.1.0",
     "jsonwebtoken": "^9.0.2",

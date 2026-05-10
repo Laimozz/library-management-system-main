@@ -1,0 +1,411 @@
+{
+  "testCaseId": "TC_UT_KHOSACH_004",
+  "generatedAt": "2026-05-10T15:04:56.477Z",
+  "snapshots": {
+    "dbTruocKhiChay": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Author One"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software"
+        },
+        {
+          "id": 2,
+          "name": "Architecture"
+        },
+        {
+          "id": 3,
+          "name": "Testing"
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "authorId": 1,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "publishYear": 2008,
+          "publisher": "Prentice Hall",
+          "pageCount": 464,
+          "price": 25,
+          "edition": "1",
+          "description": "Software craftsmanship",
+          "coverImageUrl": null,
+          "language": "en",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 11,
+          "authorId": 1,
+          "title": "Deleted Book",
+          "isbn": null,
+          "publishYear": null,
+          "publisher": null,
+          "pageCount": null,
+          "price": null,
+          "edition": null,
+          "description": null,
+          "coverImageUrl": null,
+          "language": null,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": true
+        }
+      ],
+      "bookCategories": [
+        {
+          "bookId": 10,
+          "categoryId": 1,
+          "isDeleted": false
+        },
+        {
+          "bookId": 10,
+          "categoryId": 2,
+          "isDeleted": false
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-01T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-02T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "WORN",
+          "status": "ON_BORROW",
+          "acquisitionDate": "2026-01-03T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "format": "EBOOK",
+          "isbn13": "9780000000001",
+          "fileFormat": "PDF",
+          "fileSizeBytes": "1024",
+          "checksumSha256": "old-checksum",
+          "storageUrl": "/api/files/uploads/ebooks/old.pdf",
+          "drmType": "NONE",
+          "status": "ACTIVE",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "bookId": 10,
+          "quantity": 1,
+          "borrowRequest": {
+            "status": "APPROVED",
+            "isDeleted": false
+          }
+        }
+      ],
+      "nextBookId": 12,
+      "nextBookItemId": 4,
+      "nextEditionId": 2
+    },
+    "dbSauKhiChay": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Author One"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software"
+        },
+        {
+          "id": 2,
+          "name": "Architecture"
+        },
+        {
+          "id": 3,
+          "name": "Testing"
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "authorId": 1,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "publishYear": 2008,
+          "publisher": "Prentice Hall",
+          "pageCount": 464,
+          "price": 25,
+          "edition": "1",
+          "description": "Software craftsmanship",
+          "coverImageUrl": null,
+          "language": "en",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-10T15:04:56.475Z",
+          "isDeleted": true
+        },
+        {
+          "id": 11,
+          "authorId": 1,
+          "title": "Deleted Book",
+          "isbn": null,
+          "publishYear": null,
+          "publisher": null,
+          "pageCount": null,
+          "price": null,
+          "edition": null,
+          "description": null,
+          "coverImageUrl": null,
+          "language": null,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": true
+        }
+      ],
+      "bookCategories": [
+        {
+          "bookId": 10,
+          "categoryId": 1,
+          "isDeleted": false
+        },
+        {
+          "bookId": 10,
+          "categoryId": 2,
+          "isDeleted": false
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-01T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-02T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "WORN",
+          "status": "ON_BORROW",
+          "acquisitionDate": "2026-01-03T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "format": "EBOOK",
+          "isbn13": "9780000000001",
+          "fileFormat": "PDF",
+          "fileSizeBytes": "1024",
+          "checksumSha256": "old-checksum",
+          "storageUrl": "/api/files/uploads/ebooks/old.pdf",
+          "drmType": "NONE",
+          "status": "ACTIVE",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "bookId": 10,
+          "quantity": 1,
+          "borrowRequest": {
+            "status": "APPROVED",
+            "isDeleted": false
+          }
+        }
+      ],
+      "nextBookId": 12,
+      "nextBookItemId": 4,
+      "nextEditionId": 2
+    },
+    "dbSauKhiRollback": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Author One"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software"
+        },
+        {
+          "id": 2,
+          "name": "Architecture"
+        },
+        {
+          "id": 3,
+          "name": "Testing"
+        }
+      ],
+      "books": [
+        {
+          "id": 10,
+          "authorId": 1,
+          "title": "Clean Code",
+          "isbn": "9780132350884",
+          "publishYear": 2008,
+          "publisher": "Prentice Hall",
+          "pageCount": 464,
+          "price": 25,
+          "edition": "1",
+          "description": "Software craftsmanship",
+          "coverImageUrl": null,
+          "language": "en",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 11,
+          "authorId": 1,
+          "title": "Deleted Book",
+          "isbn": null,
+          "publishYear": null,
+          "publisher": null,
+          "pageCount": null,
+          "price": null,
+          "edition": null,
+          "description": null,
+          "coverImageUrl": null,
+          "language": null,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": true
+        }
+      ],
+      "bookCategories": [
+        {
+          "bookId": 10,
+          "categoryId": 1,
+          "isDeleted": false
+        },
+        {
+          "bookId": 10,
+          "categoryId": 2,
+          "isDeleted": false
+        }
+      ],
+      "bookItems": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "code": "CP-001",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-01T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 2,
+          "bookId": 10,
+          "code": "CP-002",
+          "condition": "GOOD",
+          "status": "AVAILABLE",
+          "acquisitionDate": "2026-01-02T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        },
+        {
+          "id": 3,
+          "bookId": 10,
+          "code": "CP-003",
+          "condition": "WORN",
+          "status": "ON_BORROW",
+          "acquisitionDate": "2026-01-03T00:00:00.000Z",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "bookEditions": [
+        {
+          "id": 1,
+          "bookId": 10,
+          "format": "EBOOK",
+          "isbn13": "9780000000001",
+          "fileFormat": "PDF",
+          "fileSizeBytes": "1024",
+          "checksumSha256": "old-checksum",
+          "storageUrl": "/api/files/uploads/ebooks/old.pdf",
+          "drmType": "NONE",
+          "status": "ACTIVE",
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z",
+          "isDeleted": false
+        }
+      ],
+      "borrowRequestItems": [
+        {
+          "bookId": 10,
+          "quantity": 1,
+          "borrowRequest": {
+            "status": "APPROVED",
+            "isDeleted": false
+          }
+        }
+      ],
+      "nextBookId": 12,
+      "nextBookItemId": 4,
+      "nextEditionId": 2
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "testCaseId": "TC_UT_TACGIACATE_007",
+  "generatedAt": "2026-05-10T15:04:56.103Z",
+  "snapshots": {
+    "dbTruocKhiChay": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Nam Cao",
+          "bio": "Tac gia hien thuc",
+          "birthDate": "1915-10-29T00:00:00.000Z",
+          "nationality": "Viet Nam",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "fullName": "Deleted Author",
+          "bio": null,
+          "birthDate": null,
+          "nationality": "Japan",
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software",
+          "description": "Software books",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "name": "Deleted Category",
+          "description": null,
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        }
+      ],
+      "nextAuthorId": 3,
+      "nextCategoryId": 3
+    },
+    "dbSauKhiChay": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Nam Cao",
+          "bio": "Tac gia hien thuc",
+          "birthDate": "1915-10-29T00:00:00.000Z",
+          "nationality": "Viet Nam",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "fullName": "Deleted Author",
+          "bio": null,
+          "birthDate": null,
+          "nationality": "Japan",
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 3,
+          "fullName": "New Author x",
+          "bio": "Bio",
+          "birthDate": "1980-01-01T00:00:00.000Z",
+          "nationality": "VN",
+          "isDeleted": false,
+          "createdAt": "2026-05-10T15:04:56.101Z",
+          "updatedAt": "2026-05-10T15:04:56.101Z"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software",
+          "description": "Software books",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "name": "Deleted Category",
+          "description": null,
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        }
+      ],
+      "nextAuthorId": 4,
+      "nextCategoryId": 3
+    },
+    "dbSauKhiRollback": {
+      "authors": [
+        {
+          "id": 1,
+          "fullName": "Nam Cao",
+          "bio": "Tac gia hien thuc",
+          "birthDate": "1915-10-29T00:00:00.000Z",
+          "nationality": "Viet Nam",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "fullName": "Deleted Author",
+          "bio": null,
+          "birthDate": null,
+          "nationality": "Japan",
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Software",
+          "description": "Software books",
+          "isDeleted": false,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "name": "Deleted Category",
+          "description": null,
+          "isDeleted": true,
+          "createdAt": "2026-05-09T00:00:00.000Z",
+          "updatedAt": "2026-05-09T00:00:00.000Z"
+        }
+      ],
+      "nextAuthorId": 3,
+      "nextCategoryId": 3
+    }
+  }
+}
